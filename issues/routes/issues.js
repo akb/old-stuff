@@ -23,8 +23,8 @@ module.exports = {
       users: db['users'],
       states: db['states'],
       issue: {
-        title: null,
-        description: null,
+        title: 'new issue',
+        description: '',
         state: 'requested',
         category: 'bugs',
         requester_id: null,

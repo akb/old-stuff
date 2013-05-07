@@ -2,14 +2,19 @@ extends layout
 
 block extraScripts
   script(src='/js/issues-list.js')
+  script
+    window.issues = new IssuesList;
+    window.issues.reset( !{JSON.stringify(issues)} );
+
 
 block content
-  .list-view
+  .issues-view
     h1 You've got Issues!
-    ul
+    .create-form-view
+      .toolbar.btn-group
+        a.btn.create-link(href="/issues/new") Create new issue
+      .create-form-container
+    ul.issues-list-view
       each issue, id in issues
         li
           a(href='/issues/' + id)= issue.title
-    .create-form-container
-    .toolbar.btn-group
-      a.btn.create-link(href="/issues/new") Create new issue
