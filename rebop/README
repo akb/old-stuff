@@ -1,0 +1,11 @@
+rebop: next-generation web framework for node.js
+
+rebop is an attempt to wed the two paradigms of a standalone web server (e.g. 
+Apache) and a web programming framework (e.g. Django, Rails). rebop will 
+consist of a middleware stack for Connect, a handful of command-line utilities,
+and a web-based management interface.
+
+the heart of rebop is an in-memory data structure called a resource tree that
+contains information about how each resource available should behave. this
+tree is constructed when the web server is loaded and remains in memory until
+the server is shut down, though it may be modified while it runs.

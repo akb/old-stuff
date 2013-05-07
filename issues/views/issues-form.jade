@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  form.form-horizontal(action=action, method=method, class='issue-form-'+issueId)
+    .title.control-group
+      label.control-label(for="title") Title
+      .controls
+        input(type="text", value=issue.title, name="title")
+    .description.control-group
+      label.control-label(for="description") Description
+      .controls
+        textarea(name="description")= issue.description
+    .state.control-group
+      label.control-label(for="state") Current state
+      .controls
+        select(disabled=stateDisabled, name="state")
+          for state in states
+            option(value=state.name)= state.name
+    .category.control-group
+      label.control-label(for="category") Category
+      .controls
+        input(type="text", name="category", value=issue.category)
+    .requester.control-group
+      label.control-label(for="requester_id") Requester
+      .controls
+        select(name="requester_id")
+          for user, userId in users
+            if userId == issue.requester_id
+              option(value=userId, selected=true)= user.name
+            else
+              option(value=userId)= user.name
+    .develop.control-group
+      label.control-label(for="developer_id") Developer
+      .controls
+        select(name="developer_id")
+          for user, userId in users
+            if userId == issue.developer_id
+              option(value=userId, selected=true)= user.name
+            else
+              option(value=userId)= user.name
+    if methodOverride
+      .hidden
+        input(type="hidden", name="_method", value=methodOverride)
+    .submit.control-group
+      .controls
+        input(class='issue-submit-'+issueId, type="submit")

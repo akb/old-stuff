@@ -1,0 +1,6 @@
+.create-form-container {
+  position: absolute;
+  opacity: 0;
+  transition: height 0.5s, opacity 0.5s;
+  overflow: hidden;
+}

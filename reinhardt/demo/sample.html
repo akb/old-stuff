@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ title }}</title>
+	{# this is a comment, with a hash # in it, and shouldn't make it out of the parser #}
+</head>
+<body>
+	{% if authenticated %}
+	<span>You are logged in!</span>
+	{% endif %}
+	<div id="content">
+		{{ content }}
+	</div>
+</body>
+</html>

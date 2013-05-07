@@ -1,0 +1,11 @@
+User
+  id
+  name
+
+Issue
+  id
+  description
+  state ['requested', 'started, 'finished', 'accepted', 'rejected']
+  category
+  requester_id
+  developer_id

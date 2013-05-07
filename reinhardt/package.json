@@ -1,0 +1,15 @@
+{
+    "name": "reinhardt",
+    "description": "template language very much like django templates",
+    "version": "0.0.1",
+    "author": "Alexei Broner <alexei.broner@gmail.com>",
+    "contributors": [ 
+        { "name": "Alexei Broner", "email": "alexei.broner@gmail.com" }
+    ],
+    "dependencies": {
+        "underscore": ">= 1.1.4"
+    },
+    "keywords": ["template"],
+    "main": "./lib/template.js",
+    "engines": { "node": ">= 0.6.0 < 0.7.0" }
+}

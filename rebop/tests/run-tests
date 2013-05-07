@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+START_DIR=`pwd`
+BASE_DIR=/Users/lex/Projects/Personal/rebop
+if [[ "$1" = "-c" ]]; then
+    cd $BASE_DIR
+    rm -rf rebop-coverage
+    node-jscoverage rebop rebop-coverage
+    rm lib
+    ln -s rebop-coverage lib
+    cd $BASE_DIR/tests
+    nodeunit --reporter nodeunit-coverage/lib/reporter test-*.js
+    cd $BASE_DIR
+    rm lib
+    ln -s rebop lib
+    rm -rf rebop-coverage
+    cd $START_DIR
+else
+    cd $BASE_DIR/tests
+    nodeunit test-*.js
+fi

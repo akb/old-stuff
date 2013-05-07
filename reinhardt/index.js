@@ -1,0 +1,1 @@
+modeuls.exports = require('./lib/template');

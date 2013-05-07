@@ -1,0 +1,10 @@
+{
+  "name": "datapi",
+  "version": "0.0.1",
+  "author": "lex <alexei.broner@gmail.com>",
+  "description": "multiview persistent data via http",
+  "bin": {
+    "server": "./sbin/server"
+  },
+  "main": "./lib/datapi"
+}

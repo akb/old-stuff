@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= issue.title
+  .btn-group.btn-toolbar
+    a.btn(href='/issues') Return to issues list
+    a.btn(href='/issues/'+issueId+'/edit') Edit this issue
+  dl.dl-horizontal
+    dt.description Description
+    dd= issue.description
+    dt.state Current state
+    dd= issue.state
+    dt.category Category
+    dd= issue.category
+    dt.requester Requester
+    dd= requester.name
+    dt.developer Developer
+    dd= developer.name

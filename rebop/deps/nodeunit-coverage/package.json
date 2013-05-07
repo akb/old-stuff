@@ -1,0 +1,11 @@
+{
+    "name": "nodeunit-coverage",
+    "description": "coverage reporter for nodeunit",
+    "version": "0.0.1a",
+    "author": "Mike Bannister <mike@mike101.net>",
+    "contributors": {
+        {"name": "Alexei Broner", "email": "alexei.broner@gmail.com"}
+    },
+    "engine": [ "node >= 0.2.4"],
+    "directories": { "lib": "./lib" }
+}

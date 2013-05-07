@@ -1,0 +1,15 @@
+extends layout
+
+block extraScripts
+  script(src='/js/issues-list.js')
+
+block content
+  .list-view
+    h1 You've got Issues!
+    ul
+      each issue, id in issues
+        li
+          a(href='/issues/' + id)= issue.title
+    .create-form-container
+    .toolbar.btn-group
+      a.btn.create-link(href="/issues/new") Create new issue
