@@ -1,6 +1,3 @@
-Lex's Playground
-================
-
 All of this code used to be stored in separate github repositories but it's all
 code that I didn't want people to think they should actually use. Some of it is
 perfectly usable code, but I didn't want to 'go public' with it due to lacking
