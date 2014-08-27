@@ -1,0 +1,28 @@
+Tubes is a node.js web server framework in the form of a DSL. It is NOT
+intended for production use. I just wrote this to explore HTTP framework
+design.
+
+Tubes is inspired by jQuery, Django, and Rails, but also the late senator Ted
+Stevens. Tubes upholds Mr. Stevens' famous words by having the programmer
+define a web server as a series of tubes.
+
+A simple server that serves static files can be defined by:
+
+tubes('/').connect().toDirectory('./static/');
+
+Doing things manually is easy as well:
+
+tubes('/form').connect()
+  .get.toTemplate('formtemplate.html')
+  .post.to(function (request, response, complete) {
+    this.formData(function (data) {
+      new MyModel(data).save(function () {
+        complete('Created');
+      });
+    });
+  })
+})
+
+settings:
+	server.response.defaultMIMEType
+	server.response.defaultTextEncoding
